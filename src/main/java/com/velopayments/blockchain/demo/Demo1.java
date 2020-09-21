@@ -37,7 +37,7 @@ public class Demo1 {
 
             RemoteAgentConfiguration config =
                 new RemoteAgentConfiguration(
-                    "localhost", 4931, agentId, null);
+                    "localhost", 4931, agentId, agentEncPublic);
 
             RemoteAgentConnection conn =
                 new RemoteAgentConnection(
@@ -49,6 +49,7 @@ public class Demo1 {
 
         } catch (Exception e) {
             System.out.println("Got Exception " + e);
+            throw new RuntimeException(e);
         }
     }
 
